@@ -1,8 +1,23 @@
 import './Photos.css'
 
-const Photos = () => {
+const Photos = ({ marsPhotos, error }) => {
+  console.log(marsPhotos, 'photos.js')
+
+  const displayPhotos = () => {
+    if (marsPhotos?.length) {
+      return marsPhotos.map((photo, index) => {
+        return (
+          <div className={`photo-wrap`} key={photo.id}>
+            <img className='photo photo-${index}' src={photo.img_src} alt={`${photo.rover.name} ${photo.camera.full_name}`}/>
+          </div>
+        )
+      })
+    }
+  }
 return (
-  <h1> hello</h1>
+  <main className='photos'>
+    { marsPhotos.length > 0 ? displayPhotos() : <h3>{error}</h3> }
+  </main>
 )
 }
 
