@@ -1,0 +1,38 @@
+.link, a:link, a:visited {
+  color: #E4FDE1;
+  text-decoration: none;
+}
+
+.nav-container {
+/* background: linear-gradient(0.25turn, #247BA0 50%, #2C213D 50%) */
+background: linear-gradient(
+  0.25turn, #247BA0 -44%, #2C213D 58%);
+}
+
+.nav-icon {
+  width: 80px;
+  margin: 16px 0px 0px 16px;
+}
+
+.nav-title {
+  text-align: left;
+  margin-left: 16px;
+}
+
+.nav-links {
+  text-align: left;
+  margin-left: 16px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.nav-links > li {
+  /* font-size: 20px; */
+  font-weight: 600;
+  margin-top: 16px;
+}
+
+.nav-selected {
+  border-bottom: 2px solid #DE3130;
+  width: fit-content;
+}

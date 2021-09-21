@@ -47,7 +47,6 @@ const storeMostRecentPhotos = async () => {
             />
           )} />
       </Switch>
-      <h1> today is {getDate().join('-')} </h1>
     </div>
   );
 }

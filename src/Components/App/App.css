@@ -1,3 +1,9 @@
+body {
+  background-color: #2C213D;
+  color: #E4FDE1;
+}
+
 .App {
   text-align: center;
+  display: flex;
 }
