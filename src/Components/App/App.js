@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Router, Route, Switch } from "react-router";
 import { getDate, getRecentPhotos } from '../../Util'
 import Photos from '../Photos/Photos.js'
+import Nav from '../Nav/Nav.js'
 import './App.css';
 
 function App() {
@@ -36,6 +37,7 @@ const storeMostRecentPhotos = async () => {
   
   return (
     <div className="App">
+      <Nav/>
       <Switch>
         <Route exact path ='/'
           render={() => (
