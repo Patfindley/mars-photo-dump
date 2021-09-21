@@ -3,13 +3,14 @@
   text-decoration: none;
 }
 
-.nav-container {
-background: linear-gradient(
-  0.25turn, #247BA0 -44%, #2C213D 58%);
+.nav-container-mobile {
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(
+  0.5turn, #247BA0 -44%, #2C213D 58%);
 }
 
 .burger-container {
-  border: 1px solid red;
   width: 60px;
   height: 31px;
   margin: auto 16px;
@@ -29,7 +30,7 @@ background: linear-gradient(
   position: absolute;
   height: 5.5px;
   width: 100%;
-  background: #DE3130;
+  background: #E8655B;
   border-radius: 8px;
   opacity: 1;
   left: 0;
@@ -55,15 +56,52 @@ background: linear-gradient(
   top: 24px;
 }
 
+.burger-container.open span:nth-child(1) {
+  top: 18px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.burger-container.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+.burger-container.open span:nth-child(3) {
+  top: 18px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
 .nav-icon {
-  border: 1px solid red;
   width: 80px;
-  margin: 16px 0px 0px 16px;
+  margin: 16px;
+  z-index: 4;
+}
+
+.nav-open {
+  /* border: 1px solid blue; */
+	display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  background-color: #EC786A;
+  background-color: #247BA0;
+  background-color: #2C213D;
+  /* opacity: 0.8; */
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 86px;
+  z-index: 3;
+  transition: .5s ease-in-out;
 }
 
 .nav-title {
-  border: 1px solid red;
-
   text-align: left;
   margin-left: 16px;
 }
@@ -88,4 +126,14 @@ background: linear-gradient(
 .hidden {
   display: none;
   pointer-events: none;
+}
+
+
+
+
+.nav-container-desktop {
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(
+  0.25turn, #247BA0 -44%, #2C213D 58%);
 }

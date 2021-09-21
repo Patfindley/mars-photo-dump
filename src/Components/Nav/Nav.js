@@ -7,7 +7,7 @@ const Nav = () => {
   const [navActive, setNavActive] = useState(false)
 
   return (
-    <div className='nav-container'>
+    <div className='nav-container-mobile'>
       <div
 				className={navActive ? "burger-container open" : "burger-container"}
 				onClick={() => setNavActive(!navActive)}>
@@ -15,10 +15,10 @@ const Nav = () => {
 				<span className="patty mid"></span>
 				<span className="patty bottom"></span>
 			</div>
-      <h2 className='nav-title'>Mars Eye Candy</h2>
       <img className='nav-icon' src={marsIcon} />
       <div className={navActive ? "nav-open" : "hidden"}>
         <ul className='nav-links'>
+      <h2 className='nav-title'>Mars Eye Candy</h2>
           <NavLink
             exact={true}
             to='/'
