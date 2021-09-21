@@ -6,4 +6,12 @@ body {
 .App {
   text-align: center;
   display: flex;
+  flex-direction: column;
+}
+
+
+@media only screen and (min-width: 768px) {
+  .App {
+    flex-direction: row;
+  }
 }
