@@ -15,7 +15,13 @@ const Nav = () => {
 				<span className="patty mid"></span>
 				<span className="patty bottom"></span>
 			</div>
-      <img className='nav-icon' src={marsIcon} />
+      <NavLink
+        className='nav-link-icon'
+        exact={true}
+        to='/'
+        >
+        <img className='nav-icon' src={marsIcon} />
+        </NavLink>
       <div className={navActive ? "nav-open" : "hidden"}>
         <ul className='nav-links'>
       <h2 className='nav-title'>Mars Eye Candy</h2>
