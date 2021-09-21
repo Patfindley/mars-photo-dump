@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-
-import './App.css';
 import { getDate, getRecentPhotos } from '../../Util'
+import Photos from '../Photos/Photos.js'
+import './App.css';
 
 function App() {
   const [marsPhotos, setMarsPhotos] = useState([])
