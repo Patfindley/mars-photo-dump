@@ -10,5 +10,5 @@ export const getDate = () => {
 }
 
 export const getRecentPhotos = (date) => {
-  return fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=${date}&api_key=bN55pfI5h9jyuoXRcgkbvmK1mic9qD9je9xa40Ly`)
+  return fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=${date}&api_key=${process.env.REACT_APP_API_KEY}`)
 }
