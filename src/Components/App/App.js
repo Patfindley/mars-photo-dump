@@ -6,8 +6,9 @@ import Nav from '../Nav/Nav.js'
 import './App.css';
 
 function App() {
-  const [marsPhotos, setMarsPhotos] = useState([])
   const [currentDay, setCurrentDay] = useState(getDate())
+  const [marsPhotos, setMarsPhotos] = useState([])
+  const [likedPhotos, setLikedPhotos] = useState([])
   const [error, setError] = useState()
 
 useEffect(() => {
@@ -34,6 +35,21 @@ const storeMostRecentPhotos = async () => {
     }
   }
 }
+
+const likePhoto = (event) => {
+  const target = event.target.closest('div').id
+  const targetInfo = marsPhotos.find(photo => photo.id === Number(target))
+  if (!targetInfo.isLiked) {
+    targetInfo.isLiked = true
+    setLikedPhotos([...likedPhotos, targetInfo])
+  } else {
+    targetInfo.isLiked = false
+    const removeTarget = likedPhotos.filter(photo => photo.id !== Number(target))
+    setLikedPhotos(removeTarget)
+  }
+  console.log(targetInfo)
+  console.log(likedPhotos, 'liked')
+  }
   
   return (
     <div className="App">
@@ -43,6 +59,7 @@ const storeMostRecentPhotos = async () => {
           render={() => (
             <Photos
               marsPhotos={marsPhotos}
+              likePhoto={likePhoto}
               error={error}
             />
           )} />

@@ -131,7 +131,7 @@
   pointer-events: none;
 }
 
-
+@media only screen and (min-width: 768px) {
 
 
 .nav-container-desktop {
@@ -139,4 +139,5 @@
   justify-content: space-between;
   background: linear-gradient(
   0.25turn, #247BA0 -44%, #2C213D 58%);
+}
 }
