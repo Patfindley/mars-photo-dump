@@ -21,8 +21,8 @@ const storeMostRecentPhotos = async () => {
     setError(error.message)
   }
   if (!marsPhotos.length) {
-    const yesterday = `${currentDay[2] - 1}`
-    setCurrentDay(currentDay[2] = yesterday)
+    const previousDay = `${currentDay[2] - 1}`
+    setCurrentDay(currentDay[2] = previousDay)
     try {
       const response = await getRecentPhotos(currentDay.join('-'))
       const data = await response.json()
@@ -33,8 +33,6 @@ const storeMostRecentPhotos = async () => {
   }
   console.log(marsPhotos)
 }
-
-
   
   return (
     <div className="App">
