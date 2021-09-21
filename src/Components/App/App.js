@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
-
-import './App.css';
+import { Router, Route, Switch } from "react-router";
 import { getDate, getRecentPhotos } from '../../Util'
+import Photos from '../Photos/Photos.js'
+import './App.css';
 
 function App() {
   const [marsPhotos, setMarsPhotos] = useState([])
@@ -31,11 +32,19 @@ const storeMostRecentPhotos = async () => {
       setError(error.message)
     }
   }
-  console.log(marsPhotos)
 }
   
   return (
     <div className="App">
+      <Switch>
+        <Route exact path ='/'
+          render={() => (
+            <Photos
+              marsPhotos={marsPhotos}
+              error={error}
+            />
+          )} />
+      </Switch>
       <h1> today is {getDate().join('-')} </h1>
     </div>
   );
