@@ -21,6 +21,7 @@ Check out what the mars Rover: Curiosity is seeing over 246 million miles away!
 
 - Deploy [LINK](https://morning-hamlet-38212.herokuapp.com/)
 - GitHub Repo [LINK](https://github.com/Patfindley/mars-photo-dump)
+- FIGMA [LINK](https://www.figma.com/file/cizllM2Lredx7mAuVPwc7m/Mars-Photo-App?node-id=0%3A1)
 
 ## Features
 
