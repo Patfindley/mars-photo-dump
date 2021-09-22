@@ -20,14 +20,15 @@ const storeMostRecentPhotos = async () => {
     const response = await getPhotosForDay(currentDay)
     const data = await response.json()
     setMarsPhotos(data.photos)
+    console.log(marsPhotos, 'photos')
   } catch (error) {
     setError(error.message)
   }
-  if (!marsPhotos.length < 30) {
+  if (marsPhotos.length < 40) {
     try {
       const response = await getRecentPhotos(currentDay)
       const data = await response.json()
-      setMarsPhotos(data.photos)
+      setMarsPhotos(...marsPhotos, data.photos)
     } catch (error) {
       setError(error.message)
     }
@@ -45,8 +46,6 @@ const likePhoto = (event) => {
     const removeTarget = likedPhotos.filter(photo => photo.id !== Number(target))
     setLikedPhotos(removeTarget)
   }
-  console.log(targetInfo)
-  console.log(likedPhotos, 'liked')
   }
   
   return (
@@ -58,7 +57,7 @@ const likePhoto = (event) => {
             <Photos
               marsPhotos={marsPhotos}
               likePhoto={likePhoto}
-              error={error}/>
+              error={error}/> 
           )} />
           <Route exact path ='/liked'
           render={() => (
