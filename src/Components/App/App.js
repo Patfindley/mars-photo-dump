@@ -34,7 +34,7 @@ const storeMostRecentPhotos = async () => {
   //     setError(error.message)
   //   }
   // }
-  console.log(currentDay.getMonth())
+  console.log(currentDay.getDate())
 }
 
 const likePhoto = (event) => {

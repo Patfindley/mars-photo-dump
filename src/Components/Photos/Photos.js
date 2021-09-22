@@ -1,12 +1,21 @@
+import { useEffect, useState } from 'react';
 import './Photos.css'
 import heartBorder from '../../assets/heart_border_icon.svg'
 import heartFill from '../../assets/heart_fill_icon.svg'
 
 const Photos = ({ marsPhotos, likePhoto, error }) => {
+  const [numOfPhotos, setNumOfPhotos] =useState(10)
 
-  const displayPhotos = () => {
+  const loadMore = () => {
+    console.log(numOfPhotos, 'before')
+    setNumOfPhotos(numOfPhotos + 10)
+    console.log(numOfPhotos, 'after')
+  }
+
+  const displayPhotos = (start, stop) => {
+    const photoSet = marsPhotos.slice(start, stop)
     if (marsPhotos?.length) {
-      return marsPhotos.map((photo, index) => {
+      return photoSet.map((photo, index) => {
         return (
           <div className={`photo-wrap`} key={photo.id} id={photo.id}>
             <img className={photo.isLiked? 'heart-fill' : 'hide'} src={heartFill} />
@@ -22,7 +31,8 @@ const Photos = ({ marsPhotos, likePhoto, error }) => {
   }
 return (
   <main className='photos'>
-    { marsPhotos.length > 0 ? displayPhotos() : <h3>{error}</h3> }
+    { marsPhotos.length > 0 ? displayPhotos(0, numOfPhotos) : <h3>{error}</h3> }
+    <button className='load-more' onClick={() => loadMore()}>Load More</button>
   </main>
 )
 }

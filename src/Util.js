@@ -1,13 +1,3 @@
-// export const getDate = () => {
-//   const current = new Date()
-//   const dateFormat = []
-//   dateFormat.push(current.toLocaleDateString("en-US", { year: 'numeric' }));
-//   current.toLocaleDateString("en-US", { month: 'numeric' }) > 10 ? 
-//   dateFormat.push(current.toLocaleDateString("en-US", { month: 'numeric' })) :
-//   dateFormat.push(0 + current.toLocaleDateString("en-US", { month: 'numeric' }));
-//   dateFormat.push(current.toLocaleDateString("en-US", { day: 'numeric' }));
-//   return dateFormat
-// }
 
 // export const getPreviousDate = (date, diff) => {
 //   const newDate = date;
@@ -26,7 +16,9 @@
 // }
 
 export const getDateString = (date) => {
-  return date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDay();
+  // return date.getFullYear() + '-' + (date.getMonth() + 1 ) + '-' + date.getDay();
+
+  return `${date.getFullYear()}-0${date.getMonth() + 1}-${date.getDate()}`
 }
 
 
