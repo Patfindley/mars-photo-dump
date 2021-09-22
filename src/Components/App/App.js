@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 import { Router, Route, Switch } from "react-router";
-import { getDate, getRecentPhotos } from '../../Util'
+import {  getDateString, getPhotosForDay, getPreviousDate } from '../../Util'
 import Photos from '../Photos/Photos.js'
 import Nav from '../Nav/Nav.js'
 import './App.css';
 
 function App() {
-  const [currentDay, setCurrentDay] = useState(getDate())
+  const [currentDay, setCurrentDay] = useState(new Date())
   const [marsPhotos, setMarsPhotos] = useState([])
   const [likedPhotos, setLikedPhotos] = useState([])
   const [error, setError] = useState()
@@ -17,23 +17,24 @@ useEffect(() => {
 
 const storeMostRecentPhotos = async () => {
   try {
-    const response = await getRecentPhotos(currentDay.join('-'))
+    const response = await getPhotosForDay(currentDay)
     const data = await response.json()
     setMarsPhotos(data.photos)
   } catch (error) {
     setError(error.message)
   }
-  if (!marsPhotos.length) {
-    const previousDay = `${currentDay[2] - 1}`
-    setCurrentDay(currentDay[2] = previousDay)
-    try {
-      const response = await getRecentPhotos(currentDay.join('-'))
-      const data = await response.json()
-      setMarsPhotos(data.photos)
-    } catch (error) {
-      setError(error.message)
-    }
-  }
+  // if (!marsPhotos.length) {
+  //   const previousDay = getPreviousDate(currentDay); //`${currentDay[2] - 1}`
+  //   setCurrentDay(currentDay[2] = previousDay)
+  //   try {
+  //     const response = await getPhotosForDay(currentDay.join('-'))
+  //     const data = await response.json()
+  //     setMarsPhotos(data.photos)
+  //   } catch (error) {
+  //     setError(error.message)
+  //   }
+  // }
+  console.log(currentDay.getMonth())
 }
 
 const likePhoto = (event) => {
