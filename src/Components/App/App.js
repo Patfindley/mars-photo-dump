@@ -63,6 +63,14 @@ const likePhoto = (event) => {
               error={error}
             />
           )} />
+          <Route exact path ='/liked'
+          render={() => (
+            <Photos
+              marsPhotos={likedPhotos}
+              likePhoto={likePhoto}
+              error={error}
+            />
+          )} />
       </Switch>
     </div>
   );

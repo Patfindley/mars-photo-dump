@@ -26,12 +26,16 @@ const Nav = () => {
         <ul className='nav-links'>
       <h2 className='nav-title'>Mars Eye Candy</h2>
           <NavLink
-            exact={true}
             to='/'
             activeClassName='nav-selected'>
               <li>HOME</li>
             </NavLink>
+            <NavLink
+            exact={true}
+            to='/liked'
+            activeClassName='nav-selected'>
             <li>LIKED</li>
+            </NavLink>
             <li>ABOUT</li>
         </ul>
       </div>
