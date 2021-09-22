@@ -144,11 +144,19 @@ li {
 
 @media only screen and (min-width: 768px) {
 
+  .nav-container-desktop {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: linear-gradient(
+    0.25turn, #247BA0 -44%, #2C213D 58%);
+  }
 
-.nav-container-desktop {
-  display: flex;
-  justify-content: space-between;
-  background: linear-gradient(
-  0.25turn, #247BA0 -44%, #2C213D 58%);
-}
+  .nav-open {
+    /* border: 1px solid blue; */
+    flex-direction: row;
+    justify-content: space-around;
+    position: initial;
+    background-color: transparent;
+  }
 }
