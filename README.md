@@ -19,7 +19,7 @@
 
 Check out what the mars Rover: Curiosity is seeing over 246 million miles away!
 
--Deploy [LINK](https://morning-hamlet-38212.herokuapp.com/)
+- Deploy [LINK](https://morning-hamlet-38212.herokuapp.com/)
 - GitHub Repo [LINK](https://github.com/Patfindley/mars-photo-dump)
 
 ## Features
