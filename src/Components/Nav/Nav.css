@@ -116,7 +116,7 @@
   list-style-type: none;
 }
 
-.nav-links > li {
+li {
   font-weight: 600;
   margin-top: 16px;
 }
@@ -124,6 +124,17 @@
 .nav-selected {
   border-bottom: 2px solid #DE3130;
   width: fit-content;
+}
+
+.liked-count {
+  position: relative;
+  font-size: 10px;
+  bottom: 10px;
+  color: #E8655B;
+}
+
+.num-liked {
+  margin: 0;
 }
 
 .hidden {

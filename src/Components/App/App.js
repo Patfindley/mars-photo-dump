@@ -53,23 +53,21 @@ const likePhoto = (event) => {
   
   return (
     <div className="App">
-      <Nav/>
+      <Nav liked={likedPhotos.length}/>
       <Switch>
         <Route exact path ='/'
           render={() => (
             <Photos
               marsPhotos={marsPhotos}
               likePhoto={likePhoto}
-              error={error}
-            />
+              error={error}/>
           )} />
           <Route exact path ='/liked'
           render={() => (
             <Photos
               marsPhotos={likedPhotos}
               likePhoto={likePhoto}
-              error={error}
-            />
+              error={error}/>
           )} />
       </Switch>
     </div>

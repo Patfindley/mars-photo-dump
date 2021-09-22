@@ -3,7 +3,6 @@ import heartBorder from '../../assets/heart_border_icon.svg'
 import heartFill from '../../assets/heart_fill_icon.svg'
 
 const Photos = ({ marsPhotos, likePhoto, error }) => {
-  console.log(marsPhotos, 'photos.js')
 
   const displayPhotos = () => {
     if (marsPhotos?.length) {
