@@ -142,6 +142,23 @@ li {
   pointer-events: none;
 }
 
+@media only screen and (min-width: 320px) {
+  .heart-border {
+    left: 40px;
+  }
+
+}
+
+@media only screen and (min-width: 360px) {
+  .heart-border {
+    left: 52px;
+  }
+
+  .heart-fill {
+    left: 76px;
+  }
+}
+
 @media only screen and (min-width: 768px) {
 
   .nav-container-desktop {

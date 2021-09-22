@@ -86,7 +86,7 @@ const Nav = ({ liked }) => {
   }
 
   return (
-    window.innerWidth <= 768 ? mobileNav() : desktopNav()
+    window.innerWidth < 768 ? mobileNav() : desktopNav()
   )
 
   
