@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import './Nav.css'
 import marsIcon from '../../assets/mars_icon.png'
 
-const Nav = () => {
+const Nav = ({ liked }) => {
   const [navActive, setNavActive] = useState(false)
 
   return (
@@ -26,12 +26,21 @@ const Nav = () => {
         <ul className='nav-links'>
       <h2 className='nav-title'>Mars Eye Candy</h2>
           <NavLink
-            exact={true}
             to='/'
+            className='nav-link'
             activeClassName='nav-selected'>
               <li>HOME</li>
             </NavLink>
-            <li>LIKED</li>
+            <NavLink
+            exact={true}
+            to='/liked'
+            className='nav-link'
+            activeClassName='nav-selected'>
+            <li>LIKED 
+              {liked > 0 ? 
+              <span className='liked-count'> {liked} </span> : null}
+            </li>
+            </NavLink>
             <li>ABOUT</li>
         </ul>
       </div>

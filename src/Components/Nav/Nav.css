@@ -116,7 +116,7 @@
   list-style-type: none;
 }
 
-.nav-links > li {
+li {
   font-weight: 600;
   margin-top: 16px;
 }
@@ -126,12 +126,23 @@
   width: fit-content;
 }
 
+.liked-count {
+  position: relative;
+  font-size: 10px;
+  bottom: 10px;
+  color: #E8655B;
+}
+
+.num-liked {
+  margin: 0;
+}
+
 .hidden {
   display: none;
   pointer-events: none;
 }
 
-
+@media only screen and (min-width: 768px) {
 
 
 .nav-container-desktop {
@@ -139,4 +150,5 @@
   justify-content: space-between;
   background: linear-gradient(
   0.25turn, #247BA0 -44%, #2C213D 58%);
+}
 }
