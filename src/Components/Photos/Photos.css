@@ -56,6 +56,10 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .heart-border:hover, .heart-fill:hover {
+    transform: scale(2.1)
+  }
+
   .heart-border {
     top: 50px;
     left: 240px;
@@ -63,10 +67,7 @@
 
   .heart-fill {
     top: 50px;
-    left: 264px;  }
-
-  .heart-border:hover, .heart-fill:hover {
-    transform: scale(2.1)
+    left: 264px;
   }
-  
+
 }
