@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { NavLink } from "react-router-dom";
 import './Nav.css'
 import marsIcon from '../../assets/mars_icon.png'
@@ -20,11 +20,11 @@ const Nav = ({ liked }) => {
         exact={true}
         to='/'
         >
-        <img className='nav-icon' src={marsIcon} />
+        <img className='nav-icon' src={marsIcon} alt='mars icon' />
         </NavLink>
       <div className={navActive ? "nav-open" : "hidden"}>
         <ul className='nav-links'>
-      <h2 className='nav-title'>Mars Eye Candy</h2>
+        <h2 className='nav-title'>Mars Eye Candy</h2>
           <NavLink
             to='/'
             className='nav-link'
