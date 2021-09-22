@@ -14,17 +14,21 @@
 .heart-border {
   opacity: 0.8;
   position: relative;
-  top: 12%;
-  left: 33%;
+  /* top: 12%; */
+  top: 33px;
+  /* left: 33%; */
+  left: 60px;
   z-index: 1;
   transition: all .5s ease-in-out;
 }
 
 .heart-fill {
   position: relative;
-  top: 12%;
-  left: 46%;
-  transition: all .4s ease-in-out;
+  /* top: 12%; */
+  top: 33px;
+  /* left: 46%; */
+  left: 84px;
+  transition: all .5s ease-in-out;
 }
 
 
@@ -37,6 +41,15 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .heart-border {
+    top: 7%;
+    left: 42%;
+  }
+
+  .heart-fill {
+    top: 7%;
+  }
+
   .heart-border:hover, .heart-fill:hover {
     transform: scale(2.1)
   }
